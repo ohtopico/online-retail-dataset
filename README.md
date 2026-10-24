@@ -117,11 +117,17 @@ Python, pandas, NumPy, matplotlib, seaborn, scikit-learn (Regressão Logística,
 ## Como executar
 
 1. Baixe o arquivo `Online Retail.xlsx` no [repositório da UCI](https://archive.ics.uci.edu/dataset/352/online+retail) e coloque-o na mesma pasta do notebook.
-2. Instale as dependências:
+2. Instale as dependências (versões testadas em `requirements.txt`):
    ```bash
-   pip install pandas numpy matplotlib seaborn scikit-learn lightgbm xgboost openpyxl jupyter
+   pip install -r requirements.txt
    ```
-3. Abra e execute `Online_Retail_Dataset.ipynb`.
+3. Abra o `Online_Retail_Dataset.ipynb` e execute todas as células, em ordem (*Run All*).
+
+## Organização do notebook
+
+- **Parâmetros** reunidos numa célula no início (janela de previsão, semente, proporção de teste, limiar de seleção de variáveis).
+- **Funções auxiliares** para os passos que se repetem: contagem de pedidos por período, gráficos, cálculo de RFM, treino e avaliação de modelos (relatório, métricas, curva ROC e matriz de confusão) e tabela comparativa.
+- O notebook roda **do início ao fim, na ordem**, sem depender de células executadas fora de sequência.
 
 ## Autora
 
